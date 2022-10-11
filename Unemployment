@@ -1,0 +1,16 @@
+
+
+import pandas as pd
+import plotly.express as px
+import numpy as np
+
+excel_file_path = 'Unemployment.xlsx'
+df = pd.read_excel(excel_file_path)
+
+print(df)
+
+April = df['Apr']
+Years = df['Year']
+
+fig = px.line(df, x = Years, y = April, title = 'US Unemployment in April')
+fig.show()
